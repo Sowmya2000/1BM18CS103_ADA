@@ -74,13 +74,7 @@ int printoneperm(int a[], int dir[],int n)
 	return 0;
 }
 
-int fact(int n)
-{
-	int res=1,i;
-	for(i=1;i<=n;i++)
-	res=res*i;
-	return res;
-}
+
 
 void printpermutaions(int n)
 {
@@ -94,7 +88,7 @@ void printpermutaions(int n)
 	printf("  ");
 	for(i=0;i<n;i++)
 	dir[i]=right_to_left;
-	for(i=1;i<fact(n);i++)
+	while(getmobile(a,dir,n)!=0)
 	printoneperm(a,dir,n);
 }
 void main()
